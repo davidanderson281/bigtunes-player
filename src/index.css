@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --progress-width: 0;
+  --buffered-width: 0;
+  --buffered-left: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.progress-bar::-webkit-slider-thumb {
+  z-index: 4;
+  position: relative;
+}
+
+.progress-bar::before {
+  transform: scaleX(var(--progress-width));
+  z-index: 3;
+}
+
+.progress-bar::after {
+  transform: scaleX(var(--buffered-width));
+  transform-origin: left;
+  z-index: 2;
 }
