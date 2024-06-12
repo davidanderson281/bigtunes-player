@@ -2,7 +2,7 @@ import React from 'react';
 import { MdPlayArrow, MdPause } from 'react-icons/md';
 import AudioPlayer from './AudioPlayer';
 
-import { songs } from './songs';
+import { songsWithNames as songs } from './songs';
 
 export default function App() {
   const [currentSongIndex, setCurrentSongIndex] = React.useState(-1);
@@ -19,8 +19,8 @@ export default function App() {
               <button
                 onClick={() => setCurrentSongIndex(index)}
                 className={`flex items-center py-4 px-3  w-full space-evenly rounded ${currentSongIndex === index
-                    ? 'bg-amber-600 text-white'
-                    : ' hover:bg-amber-600 hover:text-white'
+                  ? 'bg-amber-600 text-white'
+                  : ' hover:bg-amber-600 hover:text-white'
                   }`}
               >
                 <span className="text-sm">
