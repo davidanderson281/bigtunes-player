@@ -14,7 +14,6 @@
     "user_verification_types": [
       "email"
     ],
-    "mfa_configuration": "NONE",
     "password_policy": {
       "min_length": 8,
       "require_numbers": true,
@@ -104,5 +103,9 @@
       "nonModels": {}
     }
   },
-  "version": "2"
+  "storage": {
+    "aws_region": "us-east-1",
+    "bucket_name": "amplify-bigtunesplayer-di-amplifyteamdrivebucket28-gs3en94pedha"
+  },
+  "version": "1"
 }
